@@ -1,0 +1,8 @@
+# Invoice
+
+## Entities (tables, objects)
+1. Client
+2. Jobs
+
+A. A job belongs to a client.
+B. A client can have many jobs.

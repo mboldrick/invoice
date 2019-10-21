@@ -10644,3 +10644,14 @@ a.text-dark:focus {
   }
 }
 
+.card-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
