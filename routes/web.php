@@ -19,4 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('clients', 'ClientController');
+// Clients
+// Route::resource('clients', 'ClientController');
+Route::get('/clients', 'ClientController@index')->name('clients.index');
+Route::get('/clients/create', 'ClientController@create')->name('clients.create');
+Route::post('/clients', 'ClientController@store')->name('clients.store');
+Route::get('/clients/{client}', 'ClientController@show')->name('clients.show');
+Route::get('/clients/{client}/edit', 'ClientController@edit')->name('clients.edit');
+Route::patch('/clients/{client}', 'ClientController@update')->name('clients.update');
+Route::delete('/clients/{client}', 'ClientController@destroy')->name('clients.destroy');

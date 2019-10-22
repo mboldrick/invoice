@@ -14,6 +14,8 @@
                         </div>
                     @endif
 
+                    <a href="{{ route('clients.create') }}" class="btn btn-primary mb-3 float-right">Add a Client</a>
+
                     {{ $clients->links() }}
 
                     <table class="table table-bordered table-hover">
@@ -29,13 +31,14 @@
                             <tbody>
                                 <tr>
                                     <td><a href="/clients/{{ $client->id }}">{{ $client->name }}</a></td>
-{{--                                     <td><a href="{{ route('clients.show') }}">{{ $client->name }}</a></td>
- --}}                                    <td>{{ $client->email }}</td>
+                                    <td>{{ $client->email }}</td>
                                     <td>{{ $client->phone }}</td>
                                 </tr>
                             </tbody>
                         @endforeach
                     </table>
+
+                    <a href="{{ route('clients.create') }}" class="btn btn-primary mb-3 float-right">Add a Client</a>
 
                     {{ $clients->links() }}
 

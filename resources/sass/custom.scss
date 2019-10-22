@@ -4,7 +4,13 @@
 }
 
 label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: bold;
-    text-transform: uppercase;
+    margin-bottom: 0rem;
+    // text-transform: uppercase;
+}
+
+label span {
+    font-weight: lighter;
+    font-style: italic;
 }

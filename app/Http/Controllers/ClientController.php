@@ -26,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.create');
     }
 
     /**
@@ -37,7 +37,22 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $client = new Client();
+
+        $client->name = request('name');
+        $client->address1 = request('address1');
+        $client->address2 = request('address2');
+        $client->city = request('city');
+        $client->state = request('state');
+        $client->postalcode = request('postalcode');
+        $client->country = request('country');
+        $client->email = request('email');
+        $client->phone = request('phone');
+        $client->notes = request('notes');
+
+        $client->save();
+
+        return redirect(route('clients.index'));
     }
 
     /**
@@ -59,7 +74,7 @@ class ClientController extends Controller
      */
     public function edit(Client $client)
     {
-        //
+        return view('clients.edit', ['client' => $client]);
     }
 
     /**
@@ -71,7 +86,7 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        //
+        return($client);
     }
 
     /**

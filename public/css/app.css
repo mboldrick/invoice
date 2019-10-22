@@ -10650,8 +10650,13 @@ a.text-dark:focus {
 }
 
 label {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: 0rem;
+}
+
+label span {
+  font-weight: lighter;
+  font-style: italic;
 }
 
