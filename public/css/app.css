@@ -6697,6 +6697,22 @@ readers do not read off random characters that represent icons */
 .fal {
   font-family: 'Font Awesome 5 Pro';
   font-weight: 300; }
+/*!
+ * Font Awesome Pro 5.11.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url(/fonts/fa-solid-900.eot?228fa19ba40f8b80ec58af7a3c44da56);
+  src: url(/fonts/fa-solid-900.eot?228fa19ba40f8b80ec58af7a3c44da56?#iefix) format("embedded-opentype"), url(/fonts/fa-solid-900.woff2?dbe8505cf4eb137c63b6c375e02c225e) format("woff2"), url(/fonts/fa-solid-900.woff?e4506c4b61b82db756882ce7e377bde5) format("woff"), url(/fonts/fa-solid-900.ttf?ba0b120fe013ca88a4da96fbbb2cda09) format("truetype"), url(/fonts/fa-solid-900.svg?5eef26d6096e6688a0f7b9e0ee960e1b#fontawesome) format("svg"); }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Pro';
+  font-weight: 900; }
 @charset "UTF-8";
 
 /*!
@@ -17369,5 +17385,10 @@ label span {
 
 i.fal {
   margin-right: 0.5rem;
+}
+
+td a {
+  display: block;
+  width: 100%;
 }
 
