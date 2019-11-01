@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Client Details</div>
+                <div class="card-header">
+                    <a href="{{ url()->previous() }}" class="btn btn-primary float-right">Back to List</a>
+                    Client Details
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -28,7 +31,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="Address2">Address2</label>
-                            <input type="text" readonly class="form-control" id="Address2" value="{{ $client->adress2 }}">
+                            <input type="text" readonly class="form-control" id="Address2" value="{{ $client->address2 }}">
                         </div>
                         <div class="row">
                             <div class="form-group col-md-6 mb-3">
@@ -64,7 +67,7 @@
                         </div>
                     </form>
 
-                    <a href="{{ url()->previous() }}" class="btn btn-primary">Back to List</a>
+                    <a href="{{ url()->previous() }}" class="btn btn-primary float-right">Back to List</a>
 {{--                     <a href="{{ URL::to('/clients/{{ $client->id }}' . $next ) }}">Next</a>
  --}}
                 </div>

@@ -7,5 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Fontawesome 5 Pro - light fonts only
+@import 'fontawesome.css';
+@import 'light.css';
+
 // Custom CSS / overrides of Bootstrap settings
 @import 'custom.scss';

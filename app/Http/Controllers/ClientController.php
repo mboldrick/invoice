@@ -37,20 +37,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        $client = new Client();
-
-        $client->name = request('name');
-        $client->address1 = request('address1');
-        $client->address2 = request('address2');
-        $client->city = request('city');
-        $client->state = request('state');
-        $client->postalcode = request('postalcode');
-        $client->country = request('country');
-        $client->email = request('email');
-        $client->phone = request('phone');
-        $client->notes = request('notes');
-
-        $client->save();
+        Client::create($this->validateClient());
 
         return redirect(route('clients.index'));
     }
@@ -86,7 +73,10 @@ class ClientController extends Controller
      */
     public function update(Request $request, Client $client)
     {
-        return($client);
+        $client->update($this->validateClient());
+
+        return redirect(route('clients.index'));
+        // return redirect(route('clients.show', ['client' => $client]));
     }
 
     /**
@@ -97,6 +87,22 @@ class ClientController extends Controller
      */
     public function destroy(Client $client)
     {
-        //
+        return($client);
+    }
+
+    protected function validateClient()
+    {
+        return request()->validate([
+            'name' => ['required', 'max:255'],
+            'address1' => ['max:255'],
+            'address2' => ['max:255'],
+            'city' => ['max:255'],
+            'state' => ['max:255'],
+            'postalcode' => ['max:255'],
+            'country' => ['max:255'],
+            'email' => ['max:255'],
+            'phone' => ['max:255'],
+            'notes' => ['max:255']
+        ]);
     }
 }
